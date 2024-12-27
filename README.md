@@ -2,7 +2,7 @@
 
 A Chart project for poc-k8s-keycloak-angular microservice
 
-# Deploye steps
+## Deploye steps
 
 **STEP01**: compile image
 
