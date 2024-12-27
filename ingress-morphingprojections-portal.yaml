@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
+  name: ingress-poc-k8s-keycloak-angular
+  namespace: default
+spec:
+  rules:
+  - host: minikube.io
+    http:
+      paths:
+      - path: /poc-k8s-keycloak-angular(/|$)(.*)
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: poc-k8s-keycloak-angular
+            port:
+              number: 80

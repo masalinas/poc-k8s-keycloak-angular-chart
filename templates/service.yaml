@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "poc-k8s-keycloak-angular.fullname" . }}
+  labels:
+    {{- include "poc-k8s-keycloak-angular.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    {{- include "poc-k8s-keycloak-angular.selectorLabels" . | nindent 4 }}
