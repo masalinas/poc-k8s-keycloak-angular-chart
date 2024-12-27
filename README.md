@@ -7,7 +7,7 @@ A Chart project for poc-k8s-keycloak-angular microservice
 **STEP01**: compile image
 
 ```
-$ docker build -t poc-k8s-keycloak-angular:1.1.0 .
+$ docker build --build-arg ARG_ANGULAR_PROFILES_ACTIVE=build-minikube -t poc-k8s-keycloak-angular:1.1.0 .
 $ docker tag poc-k8s-keycloak-angular:1.1.0 ofertoio/poc-k8s-keycloak-angular:1.1.0
 $ docker push ofertoio/poc-k8s-keycloak-angular:1.1.0
 ```
