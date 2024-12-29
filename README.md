@@ -36,7 +36,7 @@ $ helm push poc-k8s-keycloak-angular-chart-1.1.0.tgz oci://registry-1.docker.io/
 
 **STEP05**: install last helm chart in kubernetes
 ```
-$ helm install poc-k8s-keycloak-angular-chart oci://registry-1.docker.io/ofertoio/poc-k8s-keycloak-angular-chart
+$ helm install poc-k8s-keycloak-angular oci://registry-1.docker.io/ofertoio/poc-k8s-keycloak-angular-chart
 ```
 
 List helm charts installed
@@ -46,7 +46,7 @@ $ helm list
 
 **STEP06**: backup helm chart
 ```
-$ velero backup create poc-k8s-keycloak-angular-chart --or-selector "app.kubernetes.io/name=poc-k8s-keycloak-angular-chart or name=poc-k8s-keycloak-angular"
+$ velero backup create poc-k8s-keycloak-angular-chart --or-selector "app.kubernetes.io/name=poc-k8s-keycloak-angular or name=poc-k8s-keycloak-angular"
 ```
 
 **STEP07**: restore helm chart
